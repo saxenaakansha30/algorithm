@@ -5,7 +5,6 @@
 //  Created by Akansha.Saxena on 24/10/21.
 //
 #include <iostream>
-#include <cmath>
 using namespace std;
 
 class Solution {
