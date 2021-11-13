@@ -20,6 +20,15 @@ public:
         }
         return count;
     }
+    
+    int getSetBitByBrianKernighanAlgo(int n) {
+        int count = 0;
+        while (n > 0) {
+            n = n&(n-1);
+            count++;
+        }
+        return count;
+    }
 };
 
 int main() {
@@ -27,7 +36,8 @@ int main() {
     Solution obj;
     cout<<"Enter a number for which you want to see set bit count: ";
     cin>>n;
-    cout<<obj.getSetBitCount(n);
+    cout<<obj.getSetBitCount(n)<<endl;
+    cout<<obj.getSetBitByBrianKernighanAlgo(n)<<endl;
     cout<<endl;
     return 0;
 }
