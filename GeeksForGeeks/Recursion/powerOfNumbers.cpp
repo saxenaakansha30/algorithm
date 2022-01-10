@@ -14,6 +14,9 @@ public:
     long long power(long long N,long long R)
     {
         int M = 1000000007;
+        if (R == 0) {
+            return 1;
+        }
         if (R == 1) {
             return N%M;
         }
@@ -23,6 +26,9 @@ public:
     // Fast expnential and optimized solution.
     long long powerLongExponential(long long N, long long R) {
         long long half=0, output=0, M = 1000000007;
+        if (R == 0) {
+            return 1;
+        }
         if (R == 1) {
             return N;
         }
@@ -37,8 +43,9 @@ public:
 
 int main() {
     Solution obj;
-    long long a = 1111111166, b=2;
+    long long a = 2, b=0;
     cout<<obj.power(a, b)<<endl;
     cout<<obj.powerLongExponential(a, b)<<endl;
     return 0;
+    
 }

@@ -27,7 +27,7 @@ public:
 
 int main() {
     int arr[3] = {5,5,3};
-    Solution obj;
+    Solution obj
     cout<<obj.getSubSetSumCount(arr, 3, 0)<<endl;
     cout<<obj.getSubSetSumCountBetter(arr, 3, 0)<<endl;
     return 0;
