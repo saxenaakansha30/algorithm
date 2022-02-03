@@ -6,29 +6,40 @@
 //
 
 #include <iostream>
+#include <vector>
 using namespace std;
 
 class Solution{
 public:
-    bool isLucky(int n, int deletion_counter = 2) {
-        int next_pos;
-        if (deletion_counter > n) {
-            return true;
-        }
+    //Function to generate power set of string.
+    void powerSetUtil(string &str, vector<string>&v,int index = 0,string curr = "") {
+        int n = str.length();
         
-        if (n%deletion_counter == 0) {
-            return false;
+        //base case
+        if (index == n)
+        {
+           v.push_back(curr);
+           return;
         }
+        //Two cases for every character
+        //(i) We consider the character as part of current subset.
+        //(ii) We do not consider current character as part of current subset.
         
-        next_pos = n - n/deletion_counter;
-        return isLucky(next_pos, deletion_counter+1);
+        //Calling the function recursively for both cases.
+        powerSetUtil(str, v, index+1, curr);
+        powerSetUtil(str, v, index+1, curr+str[index]);
+    }
+
+    //Function to return the lexicographically sorted power-set of the string.
+    vector <string> powerSet(string s) {
+        vector<string> ans;
+        powerSetUtil(s, ans);
+        //returning the list.
+        return ans;
     }
 };
 
 int main() {
-    int n;
     Solution obj;
-    cin>>n;
-    cout<<obj.isLucky(n);
-    return 0;
+    cout<<"Output is"<<obj.powerSet("abc");
 }
