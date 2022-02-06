@@ -1,4 +1,4 @@
-package langJava.InterviewBit;
+package langJava.LeetCode;
 
 class Solution {
     public int searchInsert(int[] nums, int target) {
