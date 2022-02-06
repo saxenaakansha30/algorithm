@@ -1,4 +1,4 @@
-package InterviewBit;
+package langJava.InterviewBit;
 
 public class firstOccurrenceOfWord {
     public static int solve(String A, String B) {

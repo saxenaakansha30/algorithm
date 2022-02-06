@@ -1,4 +1,4 @@
-package InterviewBit;
+package langJava.InterviewBit;
 
 public class gcdWithoutRecursion {
     public int gcd(int A, int B) {
