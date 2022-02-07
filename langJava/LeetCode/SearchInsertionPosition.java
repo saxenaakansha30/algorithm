@@ -1,7 +1,7 @@
 package langJava.LeetCode;
 
-class Solution {
-    public int searchInsert(int[] nums, int target) {
+public class SearchInsertionPosition {
+    public static int searchInsert(int[] nums, int target) {
         int s = 0, e = nums.length - 1;
 
         while (s<=e) {
@@ -17,12 +17,9 @@ class Solution {
 
         return s;
     }
-}
 
-public class SearchInsertionPosition {
     public static void main(String[] args) {
-        Solution obj = new Solution();
         int[] arr = {1,3,5,6};
-        System.out.println(obj.searchInsert(arr,-1));
+        System.out.println(searchInsert(arr,-1));
     }
 }
