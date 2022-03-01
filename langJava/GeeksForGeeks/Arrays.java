@@ -123,6 +123,13 @@ public class Arrays {
         return res;
     }
 
+    /**
+     * T.C: O(N)
+     * S.C: O(1]
+     *
+     * @param A Input Array
+     * @return Max subarray sum.
+     */
     public static int maxSumSubArray(int[] A) {
         int sum = A[0], max = A[0];
 
@@ -135,8 +142,7 @@ public class Arrays {
                 sum = A[i];
             }
 
-            // Kadence Algorithm: Store sum or A[i] whatever is more.1
-
+            // Kadence Algorithm: Store sum or A[i] whatever is more.
             if (sum > max) {
                 max = sum;
             }
