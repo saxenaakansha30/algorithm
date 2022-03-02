@@ -1,6 +1,6 @@
 package langJava.GeeksForGeeks;
 
-public class Arrays {
+public class ArraysProblems {
 
     /**
      * T.C: O(N)

@@ -20,10 +20,10 @@ public class longestEvenOddSubArray {
             } else {
                 counter++;
                 type = A[i]%2;
-            }
 
-            if (counter>max) {
-                max = counter;
+                if (counter>max) {
+                    max = counter;
+                }
             }
         }
 
