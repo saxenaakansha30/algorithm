@@ -4,6 +4,7 @@ public class majorityElement {
 
     /**
      * T.C O(N)
+     * S.C: O(1)
      *
      * @param A Input array.
      * @return Index of majority element.
